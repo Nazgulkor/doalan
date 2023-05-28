@@ -1,0 +1,189 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body{
+
+  font-size: 30px;
+}
+.content{
+  display: flex;
+
+}
+nav{
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid black;
+  height: 100vh;
+  background-color: rgb(106, 106, 255);
+  
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
+  background-color: rgb(106, 106, 255);
+  border-bottom: 2px solid black;
+}
+.logo{
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+.side_theme{
+  display: block;
+  color: white!important;
+}
+.quest_image{
+  width: 500px;
+  height: 300px;
+}
+.side_theme{
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #0000004f;
+ padding: 10px 0 10px 15px;
+}
+.side_theme:hover{
+  background-color: grey;
+}
+.themas{
+  max-width: 1000px;
+ margin: 0 0 100px 130px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+  margin-top: 40px;
+  border-radius: 30px;
+  padding: 20px;
+}
+h1{
+  font-size: 60px;
+  text-align: center;
+}
+.theory{
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+.test{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: gray;
+  color: white;
+  border-radius: 30px;
+  border: 2px solid black;
+}
+.question{
+  font-size: 30px;
+}
+.test img{
+  width: 50%;
+}
+.answers_block{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.answer{
+  display: block;
+  border: 1px solid white;
+  width: 350px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 100ms;
+  user-select: none;
+}
+.answer:hover{
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
+-23px 0 20px -23px rgba(0, 0, 0, .8),
+23px 0 20px -23px rgba(0, 0, 0, .8),
+0 0 40px rgba(0, 0, 0, .1) inset;
+}
